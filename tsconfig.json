@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "my-volo-lib": [
+        "dist/my-volo-lib/my-volo-lib",
+        "dist/my-volo-lib"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

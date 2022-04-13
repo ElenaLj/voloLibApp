@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "my-volo-lib": {
+      "projectType": "library",
+      "root": "projects/my-volo-lib",
+      "sourceRoot": "projects/my-volo-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/my-volo-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-volo-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/my-volo-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-volo-lib/src/test.ts",
+            "tsConfig": "projects/my-volo-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/my-volo-lib/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "voloLibApp"
